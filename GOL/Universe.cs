@@ -26,10 +26,11 @@ namespace GOL
 
         public void SetDeadAt(Location location)
         {
-            _livingCells
-                .Select(x => x)
-                .Where(x => x.Equals(location))
-                .Single(x => _livingCells.Remove(x));
+            var locationToSetDead = _livingCells
+                .Where(x => x.Equals(location))   
+                .Single();
+
+            _livingCells.Remove(locationToSetDead);
         }
 
         public void Tick() { }
