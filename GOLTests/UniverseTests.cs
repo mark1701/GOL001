@@ -29,7 +29,7 @@ namespace GOLTests
             //what type of cell? -> specializations and 1 abstraction? go poly?
             //conflicts with existing cells? who is in charge of checking those conflicts?
             //why adding? we could assume that cells are already there and we are turning them on and off (life and death)
-            emptyUniverse.AddCell(new Cell(Location.Random()));
+            emptyUniverse.SetLivingAt(Location.Random());
 
             Assert.IsFalse(emptyUniverse.IsEmpty());
         }
