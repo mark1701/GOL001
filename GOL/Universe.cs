@@ -4,11 +4,11 @@ namespace GOL
 {
     public class Universe
     {
-        private List<object> _cells;
+        private List<Cell> _cells;
 
         private Universe()
         {
-            _cells = new List<object>();
+            _cells = new List<Cell>();
         }
 
         public static Universe GetEmptyUniverse() {
@@ -17,8 +17,10 @@ namespace GOL
 
         public bool IsEmpty() { return _cells.Count == 0; }
 
-        public void AddCell(object cell) {
+        public void AddCell(Cell cell) {
             _cells.Add(cell);
         }
+
+        public void Tick() { }
     }
 }
