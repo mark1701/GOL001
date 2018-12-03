@@ -7,7 +7,7 @@
 
         }
 
-        public bool ComeToLife(int numberOfNeighbours)
+        public bool ComesToLife(int numberOfNeighbours)
         {
             return numberOfNeighbours == 3;
         }
