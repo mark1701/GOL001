@@ -3,7 +3,7 @@
 namespace GOLTests
 {
     [TestFixture]
-    class LocationTests
+    class CoordinatesTests
     {
 
         [Test]
