@@ -29,14 +29,14 @@ namespace GOLTests
             //what type of cell? -> specializations and 1 abstraction? go poly?
             //conflicts with existing cells? who is in charge of checking those conflicts?
             //why adding? we could assume that cells are already there and we are turning them on and off (life and death)
-            emptyUniverse.SetLivingAt(Location.Random());
+            emptyUniverse.SetLivingAt(Coordinate.Random());
 
             Assert.IsFalse(emptyUniverse.IsEmpty());
         }
 
         [Test]
         public void Removing_a_cell_from_a_single_cell_universe_makes_the_universe_empty() {
-            var location = Location.Random();
+            var location = Coordinate.Random();
             var universe = Universe.GetEmptyUniverse();
             universe.SetLivingAt(location);
 

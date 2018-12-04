@@ -2,34 +2,34 @@
 
 namespace GOL
 {
-    public class Location
+    public class Coordinate
     {
         private int _row;
         private int _column;
         private Cell _cell;
 
-        private Location(int x, int y)
+        private Coordinate(int x, int y)
         {
             _row = x;
             _column = y;
         }
 
-        public static Location GetLocation(int x, int y)
+        public static Coordinate GetLocation(int x, int y)
         {
-            return new Location(x, y);
+            return new Coordinate(x, y);
         }
 
-        public static Location Random()
+        public static Coordinate Random()
         {
             var random = new Random();
             var x = random.Next(int.MinValue, int.MaxValue);
             var y = random.Next(int.MinValue, int.MaxValue);
-            return new Location(x, y);
+            return new Coordinate(x, y);
         }
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Location item))
+            if (!(obj is Coordinate item))
             {
                 return false;
             }
