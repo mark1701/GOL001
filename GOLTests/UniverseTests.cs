@@ -35,7 +35,7 @@ namespace GOLTests
         }
 
         [Test]
-        public void Removing_a_cell_from_a_single_cell_universe_make_it_empty() {
+        public void Removing_a_cell_from_a_single_cell_universe_makes_the_universe_empty() {
             var location = Location.Random();
             var universe = Universe.GetEmptyUniverse();
             universe.SetLivingAt(location);
@@ -43,5 +43,7 @@ namespace GOLTests
             universe.SetDeadAt(location);
             Assert.IsTrue(universe.IsEmpty());
         }
+
+
     }
 }
