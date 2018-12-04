@@ -6,6 +6,7 @@ namespace GOL
     {
         private int _row;
         private int _column;
+        private Cell _cell;
 
         private Location(int x, int y)
         {
@@ -36,12 +37,5 @@ namespace GOL
             return _row.Equals(item._row) && _column.Equals(item._column);
         }
 
-        public override int GetHashCode()
-        {
-            var hashCode = 610291190;
-            hashCode = hashCode * -1521134295 + _row.GetHashCode();
-            hashCode = hashCode * -1521134295 + _column.GetHashCode();
-            return hashCode;
-        }
     }
 }

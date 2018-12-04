@@ -1,13 +1,8 @@
 ﻿namespace GOL
 {
-    class LivingCell
+    class LivingCell : Cell
     {
-        public LivingCell()
-        {
-
-        }
-
-        public bool StaysAlive(int numberOfNeighbours)
+        public override bool AliveInNextGeneration(int numberOfNeighbours)
         {
             return numberOfNeighbours == 2 || numberOfNeighbours == 3;
         }

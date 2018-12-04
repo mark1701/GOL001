@@ -1,13 +1,8 @@
 ﻿namespace GOL
 {
-    class DeadCell
+    class DeadCell: Cell
     {
-        public DeadCell()
-        {
-
-        }
-
-        public bool ComesToLife(int numberOfNeighbours)
+        public override bool AliveInNextGeneration(int numberOfNeighbours)
         {
             return numberOfNeighbours == 3;
         }

@@ -42,7 +42,6 @@ namespace GOLTests
 
             universe.SetDeadAt(location);
             Assert.IsTrue(universe.IsEmpty());
-
         }
     }
 }
