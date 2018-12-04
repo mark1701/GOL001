@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using GOL;
+using System;
 
 namespace GOLTests
 {
@@ -7,11 +9,19 @@ namespace GOLTests
     {
 
         [Test]
-        public void A_solitary_cell_has_no_neighbours() {
+        public void Adjacent_Coordinates_Are_Neighbours() {
+            var neighbours = 0;
 
+            var randomCoordinate = Coordinate.Random();
+            var adjacents = randomCoordinate.Adjacents();
 
+            foreach (var adjacent in adjacents) {
+                if (adjacent.IsNeighbour(randomCoordinate)) {
+                    neighbours++;
+                }
+            }
 
-            Assert.AreEqual(1, 2);
+            Assert.AreEqual(adjacents.Count, neighbours);
         }
     }
 }
